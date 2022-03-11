@@ -2,6 +2,7 @@
 
 
 const LocationInfo = ({location}) => {
+
    
     return (
         <div className="location">
@@ -10,8 +11,6 @@ const LocationInfo = ({location}) => {
                 <div><p><b>type: </b>{location.type}</p></div>
                 <div><p><b>dimension: </b>{location.dimension}</p></div> 
                 <div><p><b>population: </b>{location.residents?.length}</p></div>
-            
-
             </div>
         </div>
     );

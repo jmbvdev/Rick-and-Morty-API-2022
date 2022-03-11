@@ -2,7 +2,7 @@ import React from 'react';
 import ResidentInfo from './ResidentInfo';
 
 const ResidentList = ({residentsUrl}) => {
-    console.log(residentsUrl)
+
     
     return (
         <div>
@@ -10,7 +10,7 @@ const ResidentList = ({residentsUrl}) => {
             <div className='card-container'>
                 {
                     residentsUrl?.map(resident=>(
-                        <ResidentInfo resident={resident}/>
+                        <ResidentInfo resident={resident} key={resident}/>
                     ))
                 }
             </div>

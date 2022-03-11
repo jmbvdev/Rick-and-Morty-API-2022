@@ -95,9 +95,30 @@ body{
 .location-specs p{
     padding: 10px;
 }
-.circle{
-  background-color: #d47f63;
-  width: 2px;
+.card-status{
+  display: flex;
+  width: 100%;
+}
+.circle-green{
+  border-radius: 50%;
+  height: 8px;
+  margin-right: 10px;
+  width: 8px;
+  background-color: #90c94b;
+}
+.circle-red{
+  border-radius: 50%;
+  height: 8px;
+  margin-right: 10px;
+  width: 8px;
+  background-color:rgb(241, 1, 1);
+}
+.circle-grey{
+  border-radius: 50%;
+  height: 8px;
+  margin-right: 10px;
+  width: 8px;
+  background-color:#73706f;
 }
 .card-container{
     display: grid;
@@ -115,6 +136,7 @@ body{
     overflow: hidden;
     transition: all .3s;
     width: 100%;
+    
   
  }
  .card:hover{
@@ -137,6 +159,7 @@ body{
     margin-bottom: 20px;
     margin-top: 20px;
     padding-left: 20px;
+    padding: 20px;
  }
  .card-specs h5, p:hover{
      color: #90c94b;

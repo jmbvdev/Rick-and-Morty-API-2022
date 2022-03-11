@@ -8,7 +8,7 @@ const ResidentInfo = ({resident}) => {
 axios.get(resident)
 .then(res=>setResidents(res.data))
     },[resident])
-   
+
 
     return (
         <div >
@@ -16,8 +16,15 @@ axios.get(resident)
                 <img src={residents.image} alt="" />
                 <div className='card-specs'>
                     <h4>{residents.name}</h4>
-                    <div>
-                        <div className='circle'></div>
+                    <div className='card-status'>
+                        <div className={residents.status==="Alive"? (
+                         "circle-green"
+                        ):(
+                            residents.status==="Dead"?(
+                                "circle-red"
+                            ):(
+                                "circle-grey"
+                        ))}></div>
                         <h5>{residents.species} - {residents.status}</h5>
                     </div>
                     <p className='light-grey'>origin</p>
