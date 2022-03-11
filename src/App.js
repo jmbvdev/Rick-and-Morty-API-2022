@@ -9,11 +9,15 @@ import ResidentList from './Components/ResidentList';
 function App() {
 
   const [location, setLocation]= useState({})
+  const [isLoading, setIsLoading]= useState(true)
 
   useEffect(()=>{
    const random = Math.floor(Math.random()*126)+1;
    axios.get(`https://rickandmortyapi.com/api/location/${random}`)
-   .then(res=>setLocation(res.data))
+   .then(res=>{
+     setLocation(res.data)
+     setIsLoading(false)
+    })
   },[])
 
  
@@ -25,7 +29,7 @@ function App() {
       <h1>Rick and Morty  API</h1>
       <SearchBox setLocation={setLocation}/>
       <LocationInfo location={location}/>
-      <ResidentList location={location} residentsUrl={location.residents}/>
+      <ResidentList location={location} residentsUrl={location.residents} isLoading={isLoading}/>
 
       </main>
      
