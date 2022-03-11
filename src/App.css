@@ -95,6 +95,10 @@ body{
 .location-specs p{
     padding: 10px;
 }
+.circle{
+  background-color: #d47f63;
+  width: 2px;
+}
 .card-container{
     display: grid;
     grid-template-columns: 1fr;

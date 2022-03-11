@@ -24,7 +24,7 @@ function App() {
       <h1>Rick and Morty  API</h1>
       <SearchBox setLocation={setLocation}/>
       <LocationInfo location={location}/>
-      <ResidentList residentsUrl={location.residents}/>
+      <ResidentList location={location} residentsUrl={location.residents}/>
 
       </main>
      
