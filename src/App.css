@@ -1,38 +1,172 @@
-.App {
-  text-align: center;
+*{
+    font-family: sans-serif;
+    color: #fff;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family:"Josefin Sans",sans-serif;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+    margin: 0;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.banner{
+    background-image: url(https://camo.githubusercontent.com/015fb7c8bcc0358082d1ed91078c4c5c6cd90f0278a42ca9052fbf532b68580a/68747470733a2f2f7669676e657474652e77696b69612e6e6f636f6f6b69652e6e65742f7269636b616e646d6f7274792f696d616765732f322f32372f506f636b65745f6d6f727479735f62616e6e65722e6a7067);
+    height: 300px;
+    background-position: 85% 3%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container{
+    background: rgb(39, 33, 33);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.container h1{
+    font-family: "Pangolin";
+    text-align: center;
+    font-size: 3rem;
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+.searchBox{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+.searchBox input{
+    background-color: #443737;
+    border: 1px solid #000;
+    border-radius: 5px 0 0 5px;
+    border-right: none;
+    text-align: center;
+    width: 70vw;
+    font-size: 1.1rem;
+    margin-top: 30px;
+    padding: 10px;
   }
-}
+  .searchBox input:focus{
+    box-shadow: 0 0 3px #90c94b;
+    color: #90c94b;
+    outline: none;
+  }
+  .searchBox input:hover{
+    box-shadow: 0 0 3px #90c94b;
+    outline: none;
+  }
+  .searchBox button{
+    background-color: #272121;
+    border: 1px solid #000;
+    border-left: none;
+    border-radius: 0 5px 5px 0;
+    color: #fff;
+    width: 100%;
+    font-size: 1.1rem;
+    margin-top: 30px;
+    padding: 10px;
+  }
+  .searchBox button:hover{
+    box-shadow: 0 0 3px #90c94b;
+    color: #90c94b;
+    cursor: pointer;
+  }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+  .location{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+.location-specs{
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+  }
+.location-specs p{
+    padding: 10px;
+}
+.card-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+}
+ .card{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  margin-bottom: 20px;
+  margin-top: 20px;
+  background-color: #3d3535;
+    border: 1px solid #92cb4c;
+    border-radius: 5px;
+    flex-direction: column;
+    overflow: hidden;
+    transition: all .3s;
+    width: 100%;
+  
+ }
+ .card:hover{
+    box-shadow: 0 0 6px #d3e154;
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+ }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+ .card img{
+    height: 200px;
+    width: 200px;
+    width: 100%;
+ }
+ .card-specs{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding-left: 20px;
+ }
+ .card-specs h5, p:hover{
+     color: #90c94b;
+ }
+ .light-grey{
+    color: #73706f;
+ }
+ @media only screen and (min-width: 450px) {
+   .card{
+    display: flex;
+    flex-direction: row;
+   }
+   .card-container{
+    margin: 20px;
+    width: 90%;
+   }
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
+  @media only screen and (min-width: 768px) {
+    .card{
+      width: 320px;
+    }
+    .card-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        width: 95%;
+        justify-content: center;
+        justify-items: center;
+       
+    }
+   }
+   @media only screen and (min-width: 1000px) {
+    .card{
+      width: 400px;
+    }
+    
+   }
