@@ -251,8 +251,9 @@ body{
   background-color: #5f4e4ec5;
 }
 .dark-mode .toggle-circle{
-  background-color: #362e2e;
-  border: 2px solid #111010;
+  background-image: url(https://thumbs.dreamstime.com/b/full-moon-cartoon-flat-design-vector-illustration-black-background-144126284.jpg);
+  background-size: contain;
+ 
   left: 0;
   transition: left 400ms ease;
 }
@@ -304,8 +305,9 @@ border: 1px solid #92cb4c;
   border: 2px solid #8cfbff69;
 }
 .light-mode .toggle-circle{
-  background-color: rgba(252, 252, 174, 0.945);
-  border: 2px solid rgb(218, 218, 0);
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5u132QIFY7hIpJAkecAY0g5NAYsescyWOlF0emlZJ9-fTWyzwGeWkwcpeRltEpL9nSWY&usqp=CAU);
+  background-size: cover;
+  background-repeat: no-repeat;
   left: 30px;
   transition: left 400ms ease;
 }
