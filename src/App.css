@@ -341,9 +341,4 @@ border: 1px solid #01133ade;
   border: 1px solid #000;
   color: #fff;
 }
-.light-mode .card-specs h5, p:hover{
-  color: #01133ade;
-}
-.light-mode .light-grey {
-  color: #01133ade;
-}
+
