@@ -9,7 +9,7 @@ const ResidentList = ({residentsUrl, isLoading}) => {
             <h2>Residents</h2>
             {
                 isLoading?(
-                    <div class="loader">
+                    <div className="loader">
                     <span></span>
                     <span></span>
                     <span></span>
