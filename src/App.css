@@ -1,6 +1,6 @@
+
 *{
     font-family: sans-serif;
-    color: #fff;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -18,13 +18,32 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
+.toggle{
+  width: 55px;
+  height: 25px;
+  border-radius: 25px;
+  padding: 2px;
+  margin-left: 20px;
+}
+.toggle-circle{
+  height: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  left: 30px;
+}
+
 .container{
-    background: rgb(39, 33, 33);
     align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
+}
+.container-tittle{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .container h1{
     font-family: "Pangolin";
@@ -46,8 +65,6 @@ body{
     width: 100%;
 }
 .searchBox input{
-    background-color: #443737;
-    border: 1px solid #000;
     border-radius: 5px 0 0 5px;
     border-right: none;
     text-align: center;
@@ -57,28 +74,20 @@ body{
     padding: 10px;
   }
   .searchBox input:focus{
-    box-shadow: 0 0 3px #90c94b;
-    color: #90c94b;
     outline: none;
   }
   .searchBox input:hover{
-    box-shadow: 0 0 3px #90c94b;
     outline: none;
   }
   .searchBox button{
-    background-color: #272121;
-    border: 1px solid #000;
     border-left: none;
     border-radius: 0 5px 5px 0;
-    color: #fff;
     width: 100%;
     font-size: 1.1rem;
     margin-top: 30px;
     padding: 10px;
   }
   .searchBox button:hover{
-    box-shadow: 0 0 3px #90c94b;
-    color: #90c94b;
     cursor: pointer;
   }
 
@@ -132,18 +141,13 @@ body{
   display: flex;
   margin-bottom: 20px;
   margin-top: 20px;
-  background-color: #3d3535;
-    border: 1px solid #92cb4c;
     border-radius: 5px;
     flex-direction: column;
     overflow: hidden;
     transition: all .3s;
     width: 100%;
-    
-  
  }
  .card:hover{
-    box-shadow: 0 0 6px #d3e154;
     -webkit-transform: scale(1.01);
     transform: scale(1.01);
  }
@@ -154,7 +158,6 @@ body{
     width: 100%;
  }
  .card-specs{
-    color: #fff;
     display: flex;
     flex-direction: column;
     height: 150px;
@@ -164,9 +167,7 @@ body{
     padding-left: 20px;
     padding: 20px;
  }
- .card-specs h5, p:hover{
-     color: #90c94b;
- }
+ 
  .light-grey{
     color: #73706f;
  }
@@ -185,7 +186,6 @@ body{
   left: 0;
   height: 100%;
   width: 100%;
-  border: 2px solid #fff;
   pointer-events: none;
   animation: animate 5s linear infinite;
 }
@@ -209,7 +209,6 @@ body{
   }
 }
 .loader h2 {
-  color: #fff;
   font-weight: 500;
   font-family: consolas;
 }
@@ -243,3 +242,108 @@ body{
     }
     
    }
+
+     /*-------DARK MODE--------*/
+.dark-mode{
+  color: #fff;
+}
+.dark-mode .toggle{
+  background-color: #5f4e4ec5;
+}
+.dark-mode .toggle-circle{
+  background-color: #362e2e;
+  border: 2px solid #111010;
+  left: 0;
+  transition: left 400ms ease;
+}
+.dark-mode .container{
+  background: rgb(39, 33, 33);
+}
+.dark-mode .searchBox input{
+  background-color: #443737;
+  border: 1px solid #000;
+}
+.dark-mode .searchBox input:focus{
+  box-shadow: 0 0 3px #90c94b;
+  color: #90c94b;
+}
+.dark-mode   .searchBox input:hover{
+  box-shadow: 0 0 3px #90c94b;
+}
+.dark-mode .card{ 
+background-color: #3d3535;
+border: 1px solid #92cb4c;
+}
+.dark-mode .card:hover{
+  box-shadow: 0 0 6px #d3e154;
+  color: #90c94b;
+}
+.dark-mode .light-grey:hover{
+  color: #d3e154;;
+
+}
+
+.dark-mode .loader span{
+  border: 2px solid #fff;
+}
+.dark-mode .loader h2{
+  color: #fff;
+}
+.dark-mode .searchBox button{
+  background-color: #272121;
+  border: 1px solid #000;
+  color: #fff;
+}
+
+ /*-------LIGHT MODE--------*/
+ .light-mode{
+  color: #272121;
+}
+.light-mode .toggle{
+  background-color: #8cfbff50;
+  border: 2px solid #8cfbff69;
+}
+.light-mode .toggle-circle{
+  background-color: rgba(252, 252, 174, 0.945);
+  border: 2px solid rgb(218, 218, 0);
+  left: 30px;
+  transition: left 400ms ease;
+}
+.light-mode .container{
+  background:  #fff;;
+}
+.light-mode .searchBox input{
+  background-color: #8cfbff69;
+  border: 1px solid rgb(0, 6, 24);
+}
+.light-mode .searchBox input:focus{
+  box-shadow: 0 0 3px #01133ade;
+  color: rgb(0, 6, 24);
+}
+.light-mode   .searchBox input:hover{
+  box-shadow: 0 0 3px #01133ade;
+}
+.light-mode .card{ 
+background-color: #fff;
+border: 1px solid #01133ade;
+}
+.light-mode .card:hover{
+  box-shadow: 0 0 6px #01133ade;
+}
+.light-mode .loader span{
+  border: 2px solid #272121;
+}
+.light-mode .loader h2{
+  color: #272121;
+}
+.light-mode .searchBox button{
+  background-color: #01133ade;
+  border: 1px solid #000;
+  color: #fff;
+}
+.light-mode .card-specs h5, p:hover{
+  color: #01133ade;
+}
+.light-mode .light-grey {
+  color: #01133ade;
+}
