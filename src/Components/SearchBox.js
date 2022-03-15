@@ -11,7 +11,7 @@ const SearchBox = ({setLocation}) => {
 
     return (
         <div className='searchBox'>
-            <div><input type="text" placeholder='type a location id' onChange={e=>setLocationId(e.target.value)} value={locationId}/></div>
+            <div><input type="text" placeholder='type a location id : 1-126' onChange={e=>setLocationId(e.target.value)} value={locationId}/></div>
             <div><button onClick={searchType}>Search</button></div>
         </div>
     );

@@ -7,6 +7,7 @@ import ResidentList from './Components/ResidentList';
 import ToggleDarkMode from './Components/ToggleDarkMode/ToggleDarkMode';
 import './App.css';
 
+
 function App() {
 
   const [location, setLocation]= useState({})
@@ -22,7 +23,6 @@ function App() {
     })
   },[])
 
- 
 
   return (
     <div className={isDark? "dark-mode": "light-mode"}>
@@ -36,9 +36,8 @@ function App() {
       <SearchBox setLocation={setLocation}/>
       <LocationInfo location={location}/>
       <ResidentList location={location} residentsUrl={location.residents} isLoading={isLoading}/>
-      
-
       </main>
+     
      
     </div>
   );

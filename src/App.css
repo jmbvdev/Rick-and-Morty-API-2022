@@ -171,6 +171,45 @@ body{
  .light-grey{
     color: #73706f;
  }
+ .pages{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+   gap: 7px;
+ }
+ .total-pages{
+  display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+   gap: 7px;
+ }
+ .page-number{
+  display: block;
+  font-size: 18px;
+  padding: 4px 8px;
+  font-weight: 200;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: transform .2s ease;
+ }
+ .page-number:active{
+  font-weight: 900;
+  font-size: 20;
+  transform: scale(1.2);
+  transition: transform .2s ease;
+  text-decoration: underline;
+ }
+ .page-number:focus{
+  font-weight: 900;
+  font-size: 20;
+ }
+.page-number:hover{
+  transform: scale(1.2);
+    transition: transform .2s ease;
+}
  .loader {
   position: relative;
   width: 200px;
@@ -283,7 +322,15 @@ border: 1px solid #92cb4c;
   color: #d3e154;;
 
 }
-
+.dark-mode .page-number{
+  color: rgba(221, 221, 221, 0.829);
+ }
+ .dark-mode .page-number:active{
+  color: #90c94b;
+ }
+ .dark-mode .page-number:focus{
+  color: #90c94b;
+ }
 .dark-mode .loader span{
   border: 2px solid #fff;
 }
@@ -332,6 +379,15 @@ border: 1px solid #01133ade;
 .light-mode .card:hover{
   box-shadow: 0 0 6px #01133ade;
 }
+.light-mode .page-number{
+  color: #00767ac7;
+ }
+ .light-mode .page-number:active{
+  color: #012324;
+ }
+ .light-mode .page-number:focus{
+  color: #012324;
+ }
 .light-mode .loader span{
   border: 2px solid #272121;
 }
