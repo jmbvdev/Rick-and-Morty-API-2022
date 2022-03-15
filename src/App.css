@@ -24,12 +24,12 @@ body{
   border-radius: 25px;
   padding: 2px;
   margin-left: 20px;
+  cursor: pointer;
 }
 .toggle-circle{
   height: 100%;
   aspect-ratio: 1;
   border-radius: 50%;
-  cursor: pointer;
   position: relative;
   left: 30px;
 }

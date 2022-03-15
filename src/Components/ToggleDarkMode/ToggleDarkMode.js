@@ -3,8 +3,8 @@ const ToggleDarkMode = ({setIsDark, isDark}) => {
 
 
     return (
-        <div className='toggle'>
-            <div className='toggle-circle' onClick={()=>setIsDark(!isDark)}></div>
+        <div className='toggle' onClick={()=>setIsDark(!isDark)}>
+            <div className='toggle-circle'></div>
         </div>
     );
 };
