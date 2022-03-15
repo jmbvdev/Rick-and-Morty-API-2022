@@ -379,7 +379,9 @@ border: 1px solid #92cb4c;
   transition: left 400ms ease;
 }
 .light-mode .container{
-  background:  #fff;;
+  background-image: url(https://uploads-ssl.webflow.com/60a11f286cce9b4ccbc7fa02/60b4f003f97d47019b76de84_half-circle--bottom.svg), linear-gradient(135deg, #f5f9ff, #f5f9ff);
+    background-position: 50% 100%, 0px 0px;
+    background-repeat: no-repeat, repeat;
 }
 .light-mode .searchBox input{
   background-color: #8cfbff69;
