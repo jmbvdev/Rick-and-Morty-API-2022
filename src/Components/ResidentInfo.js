@@ -3,12 +3,11 @@ import React, { useEffect, useState } from 'react';
 
 const ResidentInfo = ({resident}) => {
     const [residents, setResidents]= useState({})
-   
 
     useEffect(()=>{
-axios.get(resident)
-.then(res=>setResidents(res.data))
-    },[resident])
+        axios.get(resident)
+        .then(res=>setResidents(res.data))
+      },[resident])
 
 
     return (

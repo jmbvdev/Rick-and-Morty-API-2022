@@ -4,10 +4,13 @@ import React, { useState } from 'react';
 const SearchBox = ({setLocation}) => {
 
     const[locationId, setLocationId]= useState("")
+
     const searchType=()=>{
         axios.get(`https://rickandmortyapi.com/api/location/${locationId}`)
         .then(res=>setLocation(res.data))
     }
+   
+   
 
     return (
         <div className='searchBox'>

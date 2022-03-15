@@ -19,25 +19,29 @@ const ResidentList = ({residentsUrl, isLoading}) => {
 
     return (
         <div>
-            <h2>Residents</h2>
-            {
-                isLoading?(
-                    <div className="loader">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <h2>Loading....</h2>
-                </div>
-                ):(
-            <div className='card-container'>
+            <h2 className='resident-title'>Residents</h2>
+            <div className='resident-container'>
                 {
-                    residentsUrl?.slice(firsIndex,lastIndex).map(resident=>(
-                        <ResidentInfo resident={resident} key={resident}/>
-                ))}
-            </div>
+                    isLoading?(
+                        <div className="loader">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <h2>Loading....</h2>
+                    </div>
+                    ):(
+                <div className='card-container'>
+            
+                    {
+                        residentsUrl?.slice(firsIndex,lastIndex).map(resident=>(
+                            <ResidentInfo resident={resident} key={resident}/>
+                    ))}
 
+                </div>
                 )
             }
+
+            </div>
             <div className='pages'>
                 <div>
                     {

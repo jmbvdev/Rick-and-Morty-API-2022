@@ -8,11 +8,14 @@ import ToggleDarkMode from './Components/ToggleDarkMode/ToggleDarkMode';
 import './App.css';
 
 
+
 function App() {
 
   const [location, setLocation]= useState({})
   const [isLoading, setIsLoading]= useState(true)
   const[isDark, setIsDark]= useState(true)
+
+
 
   useEffect(()=>{
    const random = Math.floor(Math.random()*126)+1;
@@ -22,7 +25,7 @@ function App() {
      setIsLoading(false)
     })
   },[])
-
+ 
 
   return (
     <div className={isDark? "dark-mode": "light-mode"}>
